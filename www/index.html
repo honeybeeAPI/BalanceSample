@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+  <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+  <title>Your New Application</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <style type="text/css">
+    /* Prevent copy paste for all elements except text fields */
+
+    * {
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
+
+    input,
+    textarea {
+      -webkit-user-select: text;
+    }
+  </style>
+  <script src="cordova.js"></script>
+  <script type="application/javascript" src="js/jquery.min.js"></script>
+  <script type="application/javascript" src="jqm/jquery.mobile-min.js"></script>
+  <script type="application/javascript" src="js/index.js"></script>
+  <script type="text/javascript">
+    var onDeviceReady = function() {
+      //hide splash screen
+      setControl.setupControls();
+    };
+    document.addEventListener("deviceready", onDeviceReady, false);
+  </script>
+</head>
+
+<body>
+
+  <!-- content goes here-->
+  <div class="uwrap">
+    <div class="upage" data-role="page" id="homepage">
+      <div class="upage-outer">
+        <div data-role="header" class="container-group inner-element uib_w_1 headerstyle" data-uib="jquery_mobile/header" data-theme="a">
+          <h1>Saldo checker</h1>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content">
+          <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row">
+            <div class="col uib_col_2 col-0_12-12" data-uib="layout/col">
+              <div class="widget-container content-area vertical-col">
+
+                <a class="widget uib_w_3 d-margins" data-uib="jquery_mobile/button" data-role="button" id="ibanlogin">Get Balance</a>
+
+                <div class="widget uib_w_7 d-margins" data-uib="media/text" id="loginStatus">
+                  <p>Code :</p>
+                </div>
+                <span class="uib_shim"></span>
+              </div>
+            </div>
+            <span class="uib_shim"></span>
+          </div>
+        </div>
+        <!-- /upage-content -->
+
+        <div data-role="footer" data-position="fixed" class="container-group inner-element uib_w_2" data-uib="jquery_mobile/footer" data-theme="a">
+          <h1></h1>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+      </div>
+      <!-- /upage-outer -->
+    <!-- /upage -->
+
+    <div class="lpage" data-role="page" id="loginpage">
+    </div>
+  </div>
+  <!-- /uwrap -->
+</body>
+
+</html>
