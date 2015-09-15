@@ -1,6 +1,3 @@
-var clientId = "";
-var clientSecret = "";
-
 var raboapi_code = {
 
   authorize: function(options) {

@@ -20,10 +20,14 @@ And the whitelist plugin :
 
 <pre><code>cordova plugin add cordova-plugin-whitelist</code></pre>
 
-Fill in the clientId and clientSecret variables in the www/index.js file (top of the file) with your API application credentials
+copy www/js/apiclient-placeholder.js to www/js/apiclient.js
+Fill in the clientId and clientSecret variables in the www/js/apiclient.js file with your API application credentials
 
 Run or emulate the application with :
 
 <pre><code>cordova run ios</code></pre>
 or
 <pre><code>cordova run android</code></pre>
+
+
+If you are experiencing an authorization error, you probably forgot to fill in the right App credentials in the apiclient.js file.
