@@ -31,10 +31,11 @@ var raboapi_code = {
           redirect_uri: options.redirect_uri,
           grant_type: 'authorization_code'
         }).done(function(data) {
-          //alert("exchange code for token done");
+          // alert("exchange code for token done");
           deferred.resolve(data);
         }).fail(function(response) {
-          //alert("exchange code for token failed");
+          // console.log(JSON.stringify(response,null,2));
+          // alert("exchange code for token failed");
           deferred.reject(response.responseJSON);
         });
       } else if (error) {
@@ -75,10 +76,10 @@ var setControl = {
             xhr.setRequestHeader('Accept', "application/json");
           }
         }).done(function(data) {
-          console.log(data);
+          //console.log(data);
           var overzicht = "";
           $.each(data.ConfiguredAccounts.Account, function(key, value) {
-            console.log(key, value);
+            //console.log(key, value);
             var account = key;
             var balance = value.Balance;
             var accountname = value.ProductName;
